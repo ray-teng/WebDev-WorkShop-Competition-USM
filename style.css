@@ -1,0 +1,275 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;     /*allows us to include the padding and border in an element's total width and height*/
+                /*border-box == on an element, padding and border are included in the width and height*/
+}
+
+main{
+    min-height: 100vh;
+    min-width: 550px;
+    background: linear-gradient(to right bottom, #ffbb8a, #f0b8f4, #b1fdff);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*styling for header*/
+header{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    backdrop-filter: blur(10px);
+    display: contents;
+    justify-content: space-evenly;
+    display: flex;
+}
+header .logo{
+    height: 20%;
+    min-width: 30%;
+    padding-top: 35px;
+    padding-left: 10%;
+    display: flex;
+    align-items: center;
+}
+header .logo a{
+    text-decoration: none;
+    display: flex;
+    color: rgb(56, 56, 56);
+}
+header .logo i{
+    font-size: 30px;
+}
+header .logo #logo-name{
+    font-size: 24px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 100;
+    white-space: nowrap;
+}
+nav {
+    height: 20%;
+    width: 70%;
+    justify-content: space-evenly;
+    display: flex;
+    text-align: center;
+    white-space: nowrap;
+}
+header nav .navi{
+    padding-top: 40px;
+}
+header nav .navi a{
+    text-decoration: none;
+    font-size: 12px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(56, 56, 56);
+    opacity: 0.3;
+}
+header .logo a:hover, header nav .navi a:hover{
+    color: white;
+    transition: all 0.4s ease;
+}
+
+/*stylinig for section glass-content*/
+.glass-content
+{
+    background: #f0b8f4;
+    min-height: 70vh;
+    width: 40%;
+    min-width: 700px;
+    background: linear-gradient(
+        to left top, 
+    rgba(255,255,255,0.7), 
+    rgba(255,255,255,0.3));
+    border-radius: 26px;
+    z-index: 99;        
+    backdrop-filter: blur(15px);        
+    position: absolute;
+    top: 15%;
+    font-family: monospace;
+    box-shadow: 5px 5px 15px grey;
+    opacity: 0.8;
+}
+.glass-content h3{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 20px;
+    font-size: 24px;
+    text-align: center;
+}
+.glass-content ol{
+    margin: 15px;
+    padding-left: 50px;
+    font-size: 18px;
+    line-height: 20px;
+}
+.glass-content ol li{
+    padding-bottom: 25px;
+}
+.glass-content ol li #text-effect{
+    font-weight: bold;
+}
+.glass-content ol li #text-effect:hover{
+    color: #fff;
+    transition: all 0.4s ease;
+}
+.btn{
+    font-size: 26px;
+    position: absolute;
+    right: 3%;
+    bottom: 1%;
+    opacity: 0.7;
+}
+.btn a:hover{
+    color: #fd7b1e;
+    transition: all 0.3s ease;
+}
+
+/*styling for about_me.html*/
+.dashboard{
+    background: #f0b8f4;
+    min-height: 70vh;
+    width: 40%;
+    min-width: 150px;
+    background: linear-gradient(
+        to left top, 
+    rgba(255,255,255,0.7), 
+    rgba(255,255,255,0.3));
+    border-radius: 26px;
+    z-index: 99;        
+    backdrop-filter: blur(15px);        
+    position: absolute;
+    flex: 1;
+}
+.dashboard .profile{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dashboard .profile img{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    margin: 15px 30px;
+    position: absolute;
+    left: 25%;
+    top: 10%;
+    opacity: 1;
+}
+.dashboard .profile .profile-list{
+    position: relative;
+    top: 120px;
+    opacity: 0.8;
+}
+.dashboard .profile .profile-list .profile-details{
+    display:flex;
+    margin: 10px;
+    padding-bottom: 10px;
+}
+.dashboard .profile .profile-list .profile-details i{
+    margin: 0px 10px;
+    font-size: 20px;
+}
+.dashboard .profile .profile-list .profile-details h4{
+    font-size: 14px;
+}
+.dashboard .profile .profile-list .profile-details .small{
+    display: flex;
+}
+.dashboard .profile .profile-list .profile-details .small i{
+    font-size: 10px;
+}
+.social-media{
+    position: absolute;
+    top: 170%;
+    left: 10%;
+    display: flex;
+    flex-direction: column;
+}
+.social-media h4{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 16px;
+    opacity: 0.8;
+}
+.social-media .media{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    top: 20%;
+    left: -25%;
+    position: absolute;
+}
+.social-media .apps a{
+    text-decoration: none;
+    color: rgb(39, 39, 39);
+    margin: 20px;
+    display: flex;
+}
+.social-media .apps a:hover{
+    color: rgb(0, 201, 252);
+    transition: all 0.4s ease;
+}
+.social-media .apps i{
+    font-size: 22px;
+}
+.social-media .media .apps #mail1, #mail2{
+    margin: 10px 0px;
+}
+.social-media .media .apps #mail1 i, #mail2 i{
+    margin: 0px 5px 0px 0px;
+}
+.social-media .media .apps #mail1 p, #mail2 p{
+    font-size: 12px;
+    font-weight: 700;
+    opacity: 0.8;
+}
+.social-media .media .apps #mail1{
+    position: absolute;
+    top: 40%;
+    left: 0%;
+}
+.social-media .media .apps #mail2{
+    position: absolute;
+    top: 80%;
+    left: 0%;
+}
+
+.message{
+    flex: 2;
+    width: 60%;
+    min-width: 500px;
+    z-index: 100;
+}
+.ttl{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 30px;
+    font-weight: 800;
+    opacity: 0.8;
+    position: absolute;
+    left: 40%;
+}
+.msg-content{
+    position: absolute;
+    left: 42%;
+    top: 13%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    max-width: 370px;
+    text-align:justify;
+    margin: 10px;
+}
+.msg-content p{
+    font-size: 18px;
+    font-family: monospace;
+    white-space: normal;
+    line-height: 28px;
+}
+
+footer{
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    opacity: 0.6;
+    position: absolute;
+    bottom: 3%;
+}
